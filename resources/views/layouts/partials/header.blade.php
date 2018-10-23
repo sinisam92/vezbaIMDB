@@ -4,7 +4,7 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-            <a class="navbar-brand" href="/add">Add Movie</a>
+            <a class="navbar-brand" href="/movies/create">Add Movie</a>
             </li>
         </ul>
         </div>

@@ -10,10 +10,13 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/', 'MoviesController@index');
+
 Route::prefix('/movies')->group(function () {
 
-    Route::get('/', 'MoviesController@index');
+    Route::get('/create', 'MoviesController@create');
     Route::get('/{id}', 'MoviesController@show');
+    Route::get('/', 'MoviesController@index');
 });
 
 
