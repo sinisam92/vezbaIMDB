@@ -5,13 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Movies</title>
+    <title>@yield('title')</title>
 </head>
 <body>
     <div class="container">
         @include('layouts.partials.header')
         <main role="main" class="container">
-            
             <div class="row">
                 <div class="col-md-8 blog-main">
                         @yield('content')
@@ -20,11 +19,10 @@
                 <aside class="col-md-4 blog-sidebar">
                     @include('layouts.partials.sidebar')
                 </aside><!-- /.blog-sidebar -->
-    
             </div><!-- /.row -->
-            
         </main><!-- /.container -->    
         @include('layouts.partials.footer')
-    </div>    
+    </div>
+      
 </body>
 </html>

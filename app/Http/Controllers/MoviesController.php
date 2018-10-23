@@ -11,6 +11,13 @@ class MoviesController extends Controller
     {
         $movies = Movie::all();
 
-        return view('/index', ['movies' => $movies]);
+        return view('movies.index', ['movies' => $movies]);
+    }
+    public function show($id)
+    {
+        $movie = Movie::findOrFail($id);
+
+        return view('movies.show', ['movie' => $movie]);
     }
 }
+
