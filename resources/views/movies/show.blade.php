@@ -12,4 +12,22 @@
         <h3>{{ $movie->director}}</h3>
         <p>{{ $movie->storyline }}</p>
     </div>
+
+    @if(count($movie->comments))
+
+        <h4>Comments</h4>
+        <ul class="list-unstyled">
+            @foreach($movie->comments as $comment)
+                <li>
+                    <p> {{ $comment->content }} </p>
+                    <form method="POST" action="/posts/{{ $movie->id }}/comments/{{ $comment->id }}"> 
+                        {{ csrf_field() }} 
+                    <button type="submit" class="btn btn-danger">Delete</button>
+                    </form>
+                </li>
+            @endforeach
+            
+        </ul>
+
+    @endif
 @endsection
