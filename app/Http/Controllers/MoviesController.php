@@ -29,11 +29,13 @@ class MoviesController extends Controller
         $this->validate(
             request(),
             Movie::VALIDATION_RULES
-        );
-        
-        Movie::create(request()->all());
 
-        return redirect('/');
+        );
+       
+        Movie::create(request()->all());
+        
+        return redirect('/movies');
     }
+    
 }
 

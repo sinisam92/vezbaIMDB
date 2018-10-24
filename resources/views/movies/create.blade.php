@@ -14,9 +14,9 @@
             @include('layouts.partials.error-message', ['field' => 'title'])
         </div>
         <div class="form-group">
-            <label>Ganre</label> 
-            <input type="text" class="form-control" name="ganre" placeholder="What ganre?">
-            @include('layouts.partials.error-message', ['field' => 'ganre'])
+            <label>Genre</label> 
+            <input type="text" class="form-control" name="genre" placeholder="What ganre?">
+            @include('layouts.partials.error-message', ['field' => 'genre'])
         </div>
         <div class="form-group">
             <label>Director</label>
