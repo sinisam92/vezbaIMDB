@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Movie;
+use Illuminate\Http\Request;
+
 
 class MoviesController extends Controller
 {
@@ -29,6 +30,7 @@ class MoviesController extends Controller
             request(),
             Movie::VALIDATION_RULES
         );
+        
         Movie::create(request()->all());
 
         return redirect('/');

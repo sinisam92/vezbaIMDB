@@ -11,7 +11,7 @@ class Movie extends Model
     const VALIDATION_RULES = [
         'title' => 'required',
         'genre' => 'required',
-        'year' => 'required | min:1900 | max:2018',
+        'year' => 'required | digits:4|integer|min:1900|max:2018',
         'storyline' => 'required | max:1000'
     ];
 }

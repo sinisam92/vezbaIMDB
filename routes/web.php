@@ -15,7 +15,7 @@ Route::get('/', 'MoviesController@index');
 Route::prefix('/movies')->group(function () {
 
     Route::get('/create', 'MoviesController@create');
-    Route::post('/create', 'MoviesController@store');
+    Route::post('/', 'MoviesController@store');
     Route::get('/{id}', 'MoviesController@show');
     Route::get('/', 'MoviesController@index');
 });
