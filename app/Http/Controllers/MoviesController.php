@@ -23,5 +23,15 @@ class MoviesController extends Controller
     {
         return view('movies.create');
     }
+    public function store()
+    {
+        $this->validate(
+            request(),
+            Movie::VALIDATION_RULES
+        );
+        Movie::create(request()->all());
+
+        return redirect('/');
+    }
 }
 
