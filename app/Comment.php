@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Comment extends Model
 {
-  protected $fillable = ['content'];
+  protected $guarded = ['id'];
 
   const VALIDATION_RULES = [
       'content' => 'required | max:1000'

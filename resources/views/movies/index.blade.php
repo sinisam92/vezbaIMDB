@@ -14,12 +14,12 @@
                         <a href="/movies/{{ $movie->id }}">
                             {{ $movie->title }}
                         </a>
+                        
                 </h2>
                 <p>{{ $movie->storyline }}</p>
             </div>
         </li>
         @endforeach
-
     </ul>
 @endsection
  

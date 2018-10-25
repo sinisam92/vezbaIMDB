@@ -8,7 +8,7 @@
     <h2><a href="/movies">Back To All Movies</a></h2>
     <div class="blog-post">
         <h2 class="blog-post-title">{{ $movie->title }}</h2>
-        <p>Genre: {{ $movie->genre}}</p> 
+        <p>Genre: <a href="/genres/{{$movie->genre}}">{{ $movie->genre}}</a> </p> 
         <p>Relise Date: {{ $movie->year }}</p>
         <p>Director: {{ $movie->director}}</p>
         <p>Storyline: {{ $movie->storyline }}</p>
@@ -21,10 +21,10 @@
                 <li>
                     <p>Posted at: {{ $comment->created_at }}</p>
                     <p> {{ $comment->content }} </p>
-                    <form method="POST" action="/posts/{{ $movie->id }}/comments/{{ $comment->id }}"> 
+                    {{-- <form method="POST" action="/posts/{{ $movie->id }}/comments/{{ $comment->id }}"> 
                         {{ csrf_field() }} 
                     <button type="submit" class="btn btn-danger">Delete</button>
-                    </form>
+                    </form> --}}
                 </li>
             @endforeach        
         </ul>
